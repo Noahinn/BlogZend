@@ -29,7 +29,9 @@ class IndexController extends AbstractActionController
     }
      public function homeAction()
     {
-        return new ViewModel();
+        return new ViewModel([
+            'posts' => $this->table->fetchAll(),
+        ]);
     }
      public function postAction()
     {

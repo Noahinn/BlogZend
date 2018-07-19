@@ -35,10 +35,19 @@ class IndexController extends AbstractActionController
     }
      public function postAction()
     {
-        return new ViewModel();
+        $id = $this->params()->fromRoute('id', -1);
+        return new ViewModel([
+            'posts' => $this->table->getPost($id),
+        ]);
     }
 
     public function getPostAction(){
 
     }
+
+    // public function postAction(){
+    //     return new ViewModel([
+    //         'posts' => $this->table->select()->where(['id' => 2]),
+    //     ]);
+    // }
 }

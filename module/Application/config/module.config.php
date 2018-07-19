@@ -17,7 +17,7 @@ return [
             'home' => [
                 'type' => Literal::class,
                 'options' => [
-                    'route'    => '/',
+                    'route'    => '/home',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'home',
@@ -25,9 +25,12 @@ return [
                 ],
             ],
             'post' => [
-                'type' => Literal::class,
+                'type' => Segment::class,
                 'options' => [
-                    'route'    => '/post',
+                    'route'    => '/post[/:id]',
+                    'constraints' => [
+                        'id'     => '[0-9]+',
+                    ],
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'post',

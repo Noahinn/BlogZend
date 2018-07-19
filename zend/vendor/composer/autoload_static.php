@@ -13,7 +13,6 @@ class ComposerStaticInit8e175aeab142445b2e1ddaafb62ad05d
             'Zend\\Validator\\' => 15,
             'Zend\\Uri\\' => 9,
             'Zend\\Stdlib\\' => 12,
-            'Zend\\SkeletonInstaller\\' => 23,
             'Zend\\ServiceManager\\' => 20,
             'Zend\\Router\\' => 12,
             'Zend\\Mvc\\' => 9,
@@ -22,6 +21,7 @@ class ComposerStaticInit8e175aeab142445b2e1ddaafb62ad05d
             'Zend\\Http\\' => 10,
             'Zend\\EventManager\\' => 18,
             'Zend\\Escaper\\' => 13,
+            'Zend\\Db\\' => 8,
             'Zend\\Config\\' => 12,
             'Zend\\ComponentInstaller\\' => 24,
             'ZF\\DevelopmentMode\\' => 19,
@@ -58,10 +58,6 @@ class ComposerStaticInit8e175aeab142445b2e1ddaafb62ad05d
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-stdlib/src',
         ),
-        'Zend\\SkeletonInstaller\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/zendframework/zend-skeleton-installer/src',
-        ),
         'Zend\\ServiceManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-servicemanager/src',
@@ -93,6 +89,10 @@ class ComposerStaticInit8e175aeab142445b2e1ddaafb62ad05d
         'Zend\\Escaper\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-escaper/src',
+        ),
+        'Zend\\Db\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-db/src',
         ),
         'Zend\\Config\\' => 
         array (

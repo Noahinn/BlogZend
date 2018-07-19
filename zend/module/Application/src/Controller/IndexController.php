@@ -6,15 +6,26 @@
  */
 
 namespace Application\Controller;
-
+use Application\Model\PostTable;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    // Add this property:
+    private $table;
+
+    // Add this constructor:
+    public function __construct(PostTable $table)
+    {
+        $this->table = $table;
+    }
+
     public function indexAction()
     {
-        return new ViewModel();
+        return new ViewModel([
+            'posts' => $this->table->fetchAll(),
+        ]);
     }
      public function homeAction()
     {
@@ -23,5 +34,9 @@ class IndexController extends AbstractActionController
      public function postAction()
     {
         return new ViewModel();
+    }
+
+    public function getPostAction(){
+
     }
 }

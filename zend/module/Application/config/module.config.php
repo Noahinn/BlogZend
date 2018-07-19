@@ -20,7 +20,7 @@ return [
                     'route'    => '/',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
-                        'action'     => 'home',
+                        'action'     => 'index',
                     ],
                 ],
             ],
@@ -36,11 +36,11 @@ return [
             ],
         ],
     ],
-    'controllers' => [
-        'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
-        ],
-    ],
+    // 'controllers' => [
+    //     'factories' => [
+    //         Controller\IndexController::class => InvokableFactory::class,
+    //     ],
+    // ],
     'view_manager' => [
         'display_not_found_reason' => true,
         'display_exceptions'       => true,

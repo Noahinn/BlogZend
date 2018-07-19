@@ -13,4 +13,22 @@
 
 return [
     // ...
+    // 'db' => [
+    //     'adapters' => [
+    //         'Application\Db\WriteAdapter' => [
+    //             'driver' => 'Pdo',
+    //             'dsn'    => 'mysql:dbname=homestead;host=localhost;charset=utf8',
+    //         ],
+    //         'Application\Db\ReadOnlyAdapter' => [
+    //             'driver' => 'Pdo',
+    //             'dsn'    => 'mysql:dbname=homestead;host=localhost;charset=utf8',
+    //         ],
+    //     ],
+    // ],
+    'db' => [
+        'driver' => 'Pdo',
+        'dsn'    => 'mysql:dbname=homestead;host=localhost;charset=utf8;',
+        'username' => 'root',
+        'password' => '',
+    ],
 ];

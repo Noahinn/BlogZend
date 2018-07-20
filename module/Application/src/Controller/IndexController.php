@@ -29,6 +29,8 @@ class IndexController extends AbstractActionController
     }
      public function homeAction()
     {
+        // $baseurl=$this->serverUrl();
+        // $this->view->headLink()->appendStylesheet($baseurl."/public/css/bootstrap.css");
         return new ViewModel([
             'posts' => $this->table->fetchAll(),
         ]);

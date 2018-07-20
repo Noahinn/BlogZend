@@ -15,28 +15,33 @@ return [
     'router' => [
         'routes' => [
             'home' => [
-                'type' => Literal::class,
+                'type' => Segment::class,
                 'options' => [
-                    'route'    => '/home',
+                    // 'route'    => '/home',
+                    'route' => '[/:action[/:id]]',
+                    'constraints' => [
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ],
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action'     => 'home',
                     ],
                 ],
             ],
-            'post' => [
-                'type' => Segment::class,
-                'options' => [
-                    'route'    => '/post[/:id]',
-                    'constraints' => [
-                        'id'     => '[0-9]+',
-                    ],
-                    'defaults' => [
-                        'controller' => Controller\IndexController::class,
-                        'action'     => 'post',
-                    ],
-                ],
-            ],
+            // 'post' => [
+            //     'type' => Segment::class,
+            //     'options' => [
+            //         'route'    => '/post[/:id]',
+            //         'constraints' => [
+            //             'id'     => '[0-9]+',
+            //         ],
+            //         'defaults' => [
+            //             'controller' => Controller\IndexController::class,
+            //             'action'     => 'post',
+            //         ],
+            //     ],
+            // ],
         ],
     ],
     // 'controllers' => [

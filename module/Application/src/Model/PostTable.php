@@ -15,7 +15,7 @@ class PostTable
 
     public function fetchAll()
     {
-        return $this->tableGateway->select()->order('id DESC');
+        return $this->tableGateway->select();
     }
     public function getPost($id)
     {

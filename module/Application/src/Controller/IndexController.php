@@ -29,16 +29,27 @@ class IndexController extends AbstractActionController
     }
      public function homeAction()
     {
+        // $baseurl=$this->serverUrl();
+        // $this->view->headLink()->appendStylesheet($baseurl."/public/css/bootstrap.css");
         return new ViewModel([
             'posts' => $this->table->fetchAll(),
         ]);
     }
      public function postAction()
     {
-        return new ViewModel();
+        $id = $this->params()->fromRoute('id', -1);
+        return new ViewModel([
+            'posts' => $this->table->getPost($id),
+        ]);
     }
 
     public function getPostAction(){
 
     }
+
+    // public function postAction(){
+    //     return new ViewModel([
+    //         'posts' => $this->table->select()->where(['id' => 2]),
+    //     ]);
+    // }
 }
